@@ -1,0 +1,35 @@
+diff --git a/Makefile.am b/Makefile.am
+index 76a041d..f81fde1 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -132,7 +132,8 @@ resume_SOURCES=\
+ 	resume.c
+ resume_LDADD=\
+ 	libsuspend-common.a \
+-	$(common_s2disk_libs)
++	$(common_s2disk_libs) \
++	$(BZ2_LIBS)
+ if ENABLE_RESUME_STATIC
+ resume_LDFLAGS=\
+ 	$(AM_LDFLAGS) \
+diff --git a/configure.ac b/configure.ac
+index 9172296..02af32e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -205,6 +205,14 @@ if test "${enable_compress}" = "yes"; then
+ 				[AC_MSG_ERROR([Required lzo library not found])]
+ 			)]
+ 		)
++		AC_ARG_VAR([BZ2_CFLAGS], [C compiler flags for bz2])
++		AC_ARG_VAR([BZ2_LIBS], [linker flags for bz2])
++		AC_CHECK_LIB(
++			[bz2],
++			[BZ2_bzDecompress],
++			[BZ2_LIBS="-lbz2"],
++			[AC_MSG_ERROR([Required bz2 library not found])]
++		)
+ 	fi
+ fi
+
+--
+1.8.0
