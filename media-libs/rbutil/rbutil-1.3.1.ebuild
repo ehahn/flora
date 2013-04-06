@@ -1,6 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=4
 LANGS="cs de fi fr he it ja nl pl pt pt_BR ru tr zh_CN zh_TW"

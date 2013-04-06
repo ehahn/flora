@@ -1,6 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.2.ebuild,v 1.5 2012/09/16 14:26:42 armin76 Exp $
 
 EAPI=4
 inherit base
