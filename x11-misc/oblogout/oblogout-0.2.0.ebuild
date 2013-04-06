@@ -38,4 +38,3 @@ src_install(){
 	insinto /etc
 	doins ${FILESDIR}/oblogout.conf || die
 }
-

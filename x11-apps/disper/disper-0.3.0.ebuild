@@ -13,10 +13,13 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-lang/python"
+PYTHON_DEPEND="2"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/dispercur"
-
+src_prepare() {
+    python_convert_shebangs -r 2 .
+}
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed."
 	doman "${PN}.1"
