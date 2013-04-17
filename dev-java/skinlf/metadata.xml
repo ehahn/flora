@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>java</herd>
+	<maintainer>
+		<email>erik_hahn@gmx.de</email>
+		<name>Erik Hahn</name>
+	</maintainer>
+	<upstream>
+		<changelog>http://l2fprod.com/skinlf/download/index.php</changelog>
+	</upstream>
+</pkgmetadata>
+
